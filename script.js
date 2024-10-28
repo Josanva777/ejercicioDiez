@@ -62,6 +62,8 @@ function controlInventario() {
     mostrarGananciaTotal(); 
 }
 
+controlInventario();
+
 
 
 
