@@ -24,6 +24,20 @@ function capturarPrecioProducto() {
     return precio;
 }
 
+function calcularGananciaProducto(precio) {
+    let ganancia;
+    if (precio < 10000) {
+        ganancia = precio * 0.05;
+    } else if (precio >= 10000 && precio <= 50000) {
+        ganancia = precio * 0.10;
+    } else {
+        ganancia = precio * 0.15;
+    }
+    return ganancia;
+}
+
+
+
 
 
 
