@@ -36,6 +36,31 @@ function calcularGananciaProducto(precio) {
     return ganancia;
 }
 
+function mostrarGananciaTotal() {
+    console.log("La ganancia total es: $" + gananciaTotal);
+}
+
+function controlInventario() {
+    if (!iniciarSesion()) {
+        return; // esto es para salir si no se inicia sesion
+    }
+
+    let continuar = true;
+
+    while (continuar) {
+        let precio = capturarPrecioProducto();
+
+        if (precio > 0) {
+            let ganancia = calcularGananciaProducto(precio);
+            gananciaTotal += ganancia;
+            console.log("Ganancia para el producto que vale $" + precio + " es: $" + ganancia.toFixed(2));
+        }
+
+        continuar = confirm("¿Desea ingresar otro producto?"); 
+    }
+
+    mostrarGananciaTotal(); 
+}
 
 
 
