@@ -13,5 +13,17 @@ function iniciarSesion() {
     }
 }
 
+function capturarPrecioProducto() {
+    let precio = parseFloat(prompt("Ingrese el precio del producto:"));
+
+    if (precio <= 0) {
+        console.log("ingrese un precio válido.");
+        return 0; 
+    }
+    
+    return precio;
+}
+
+
 
 
